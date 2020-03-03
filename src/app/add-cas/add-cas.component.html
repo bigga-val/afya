@@ -1,0 +1,73 @@
+<body>
+   
+   
+    <!-- header-end -->
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg_2 bradcam_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>ajouter un cas </h3>
+                        <p><a href="index.html">Home /</a>add cas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+    <!-- ================ contact section start ================= -->
+        <section class="contact-section">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title"> Ecrivez ici</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form [formGroup]="addCasForm" (ngSubmit)="saveCas()">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                         <label for="InputsymptomePatient"> Ecrivez-nous</label>
+                                         <textarea type="text" class="form-control" formControlName="symptomePatient" id="InputsymptomePatient" placeholder="Ecrivez ici" cols="30" rows="9"></textarea>
+                                     </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="InputagePatient"> votre age</label>
+                                         <input type="number" class="form-control" formControlName="agePatient" id="InputagePatient" placeholder="quel est votre age">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="InputpoidsPatient"> votre poids</label>
+                                    <input type="number" class="form-control" formControlName="poidsPatient" id="InputpoidsPatient" placeholder="Entrez le poids">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="InputdateSymptome"> debut des symtomptomes</label>
+                                    <input type="date" class="form-control" formControlName="dateSymptome" id="InputdateSymptome" placeholder="Date de naissance">
+                                </div>
+                              </div>
+                              <button type="submit" class="btn btn-primary" [disabled]="addCasForm.invalid || loading">ajouter les symptomes</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3>+1 253 565 2365</h3>
+                                <p>Mon to Fri 9am to 6pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- ================ contact section end ================= -->
+    
+</body>
